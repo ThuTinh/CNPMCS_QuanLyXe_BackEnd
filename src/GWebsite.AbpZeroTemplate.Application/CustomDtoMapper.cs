@@ -2,6 +2,7 @@ using AutoMapper;
 using GWebsite.AbpZeroTemplate.Application.Share.Customers.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.DemoModels.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.ThongTinVaHanhXe.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto;
 using GWebsite.AbpZeroTemplate.Core.Models;
 
@@ -32,6 +33,12 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<ThongTinXeInput, ThongTinXe>();
             configuration.CreateMap<ThongTinXe, ThongTinXeInput>();
             configuration.CreateMap<ThongTinXe, ThongTinXeForViewDto>();
+
+            configuration.CreateMap<ThongTinVanHanhXe, ThongTinVanHanhXeDto>();
+            configuration.CreateMap<ThongTinVanHanhXeInput, ThongTinVanHanhXe>();
+            configuration.CreateMap<ThongTinVanHanhXe, ThongTinVanHanhXeInput>();
+            configuration.CreateMap<ThongTinVanHanhXe, ThongTinVanHanhXeForViewDto>();
+
         }
     }
 }

@@ -79,7 +79,7 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             //filler by value
             if (input.ThongTinXeId != null)
             {
-                query = query.Where(x => !x.ThongTinXeId.ToLower().Equals(input.ThongTinXeId));
+                query = query.Where(x => x.ThongTinXeId.ToLower().Equals(input.ThongTinXeId));
 
             }
             var totalCount = query.Count();
