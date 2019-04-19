@@ -1,4 +1,5 @@
-using AutoMapper;
+﻿using AutoMapper;
+using GWebsite.AbpZeroTemplate.Application.Share.Quanlyxes.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.Customers.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.DemoModels.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients.Dto;
@@ -26,6 +27,12 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<CustomerInput, Customer>();
             configuration.CreateMap<Customer, CustomerInput>();
             configuration.CreateMap<Customer, CustomerForViewDto>();
+
+            // quản lý xe
+            configuration.CreateMap<Quanlyxe, QuanlyxeDto>();
+            configuration.CreateMap<QuanlyxeInput, Quanlyxe>();
+            configuration.CreateMap<Quanlyxe, QuanlyxeInput>();
+            configuration.CreateMap<Quanlyxe, QuanlyxeForViewDto>();
         }
     }
 }

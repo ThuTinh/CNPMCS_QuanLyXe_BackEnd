@@ -24,5 +24,10 @@
         public const string Pages_Administration_Customer_Edit = "Pages.Administration.Customer.Edit";
         public const string Pages_Administration_Customer_Delete = "Pages.Administration.Customer.Delete";
 
+        public const string Pages_Administration_Quanlyxe = "Pages.Administration.Quanlyxe";
+        public const string Pages_Administration_Quanlyxe_Create = "Pages.Administration.Quanlyxe.Create";
+        public const string Pages_Administration_Quanlyxe_Edit = "Pages.Administration.Quanlyxe.Edit";
+        public const string Pages_Administration_Quanlyxe_Delete = "Pages.Administration.Quanlyxe.Delete";
+
     }
 }
