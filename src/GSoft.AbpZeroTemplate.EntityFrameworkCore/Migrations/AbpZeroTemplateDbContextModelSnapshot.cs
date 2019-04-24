@@ -1724,6 +1724,80 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("GPermissions");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinBaoHiem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("congTyBaoHiem");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("loaiBaoHiem");
+
+                    b.Property<DateTime>("ngayHetHanBaoHiem");
+
+                    b.Property<DateTime>("ngayMuaBaoHiem");
+
+                    b.Property<int?>("soTienThanhToan");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<DateTime>("thoiHanBaoHiem");
+
+                    b.Property<string>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinBaoHiems");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinDangKiem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("coQuanDangKiem");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<DateTime>("ngayDangKiem");
+
+                    b.Property<DateTime>("ngayHetHanDangKiem");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<DateTime>("thoiHanDangKiem");
+
+                    b.Property<string>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinDangKiems");
+                });
+
             modelBuilder.Entity("GSoft.AbpZeroTemplate.Editions.SubscribableEdition", b =>
                 {
                     b.HasBaseType("Abp.Application.Editions.Edition");
