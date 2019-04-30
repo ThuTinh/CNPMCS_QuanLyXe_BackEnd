@@ -24,11 +24,16 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         public virtual DbSet<MenuClient> MenuClients { get; set; }
         public virtual DbSet<DemoModel> DemoModels { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<ThongTinXe> ThongTinXes { get; set; }
+        public virtual DbSet<PhiDuongBo> PhiDuongBos { get; set; }
+        public virtual DbSet<ThongTinSuaChua> ThongTinSuaChuas { get; set; }
+        
         /// <summary>
+        /// 
+        /// 
         /// GPermissions dùng cho bên Gwebsite
         /// </summary>
         public virtual DbSet<Permission> GPermissions { get; set; }
-
         /// <summary>
         /// 
         /// </summary>

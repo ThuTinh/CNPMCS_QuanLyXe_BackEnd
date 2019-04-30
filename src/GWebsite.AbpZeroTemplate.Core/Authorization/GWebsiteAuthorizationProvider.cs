@@ -46,6 +46,16 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             customer.CreateChildPermission(GWebsitePermissions.Pages_Administration_Customer_Edit, L("EditingCustomer"));
             customer.CreateChildPermission(GWebsitePermissions.Pages_Administration_Customer_Delete, L("DeletingCustomer"));
 
+            var phiDuongBo = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo, L("PhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Create, L("CreatingNewPhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Edit, L("EditingPhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Delete, L("DeletingPhiDuongBo"));
+
+            var thongTinSuaChua = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua, L("ThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Create, L("CreatingNewThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Edit, L("EditingThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Delete, L("DeletingThongTinSuaChua"));
+
         }
 
         private static ILocalizableString L(string name)

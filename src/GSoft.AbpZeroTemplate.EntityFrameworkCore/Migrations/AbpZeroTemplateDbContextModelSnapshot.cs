@@ -1724,6 +1724,125 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("GPermissions");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.PhiDuongBo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("congTyThuPhi");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("loaiPhi");
+
+                    b.Property<string>("ngayCapNhat");
+
+                    b.Property<string>("ngayDongPhi");
+
+                    b.Property<string>("ngayHetHanDongPhi");
+
+                    b.Property<string>("soTienThanhToan");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<string>("thoiGianSuDung");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PhiDuongBos");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinSuaChua", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("chiPhiSuaChua");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("ngayDuKienSuaXong");
+
+                    b.Property<string>("ngaySuaChua");
+
+                    b.Property<string>("noiDungSuaChuaThucTe");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<bool>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinSuaChuas");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinXe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<float>("dinhMucNhienLieu");
+
+                    b.Property<string>("hangSanXuat");
+
+                    b.Property<string>("loaiHopSo");
+
+                    b.Property<string>("loaiNhienLieu");
+
+                    b.Property<string>("loaiXe");
+
+                    b.Property<string>("model");
+
+                    b.Property<int>("namSanXuat");
+
+                    b.Property<string>("nuocSanXuat");
+
+                    b.Property<string>("soMay");
+
+                    b.Property<string>("soSuon");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<float>("theTichDongCo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinXes");
+                });
+
             modelBuilder.Entity("GSoft.AbpZeroTemplate.Editions.SubscribableEdition", b =>
                 {
                     b.HasBaseType("Abp.Application.Editions.Edition");

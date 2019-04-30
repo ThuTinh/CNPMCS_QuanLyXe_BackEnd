@@ -24,5 +24,16 @@
         public const string Pages_Administration_Customer_Edit = "Pages.Administration.Customer.Edit";
         public const string Pages_Administration_Customer_Delete = "Pages.Administration.Customer.Delete";
 
+
+        public const string Pages_Administration_PhiDuongBo = "Pages.Administration.PhiDuongBo";
+        public const string Pages_Administration_PhiDuongBo_Create = "Pages.Administration.PhiDuongBo.Create";
+        public const string Pages_Administration_PhiDuongBo_Edit = "Pages.Administration.PhiDuongBo.Edit";
+        public const string Pages_Administration_PhiDuongBo_Delete = "Pages.Administration.PhiDuongBo.Delete";
+
+        public const string Pages_Administration_ThongTinSuaChua = "Pages.Administration.ThongTinSuaChua";
+        public const string Pages_Administration_ThongTinSuaChua_Create = "Pages.Administration.ThongTinSuaChua.Create";
+        public const string Pages_Administration_ThongTinSuaChua_Edit = "Pages.Administration.ThongTinSuaChua.Edit";
+        public const string Pages_Administration_ThongTinSuaChua_Delete = "Pages.Administration.ThongTinSuaChua.Delete";
+
     }
 }
