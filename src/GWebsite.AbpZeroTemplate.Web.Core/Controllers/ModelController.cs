@@ -47,9 +47,9 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
         }
 
         [HttpGet]
-        public ModelForViewDto GetModelForView(int id)
+        public ModelForViewDto GetModelForView(string model)
         {
-            return modelAppService.GetModelForView(id);
+            return modelAppService.GetModelForView(model);
         }
     }
 }

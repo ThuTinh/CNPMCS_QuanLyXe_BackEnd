@@ -25,19 +25,25 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
             return thongTinXeAppService.GetThongTinXes(filter);
         }
         [HttpGet]
-        public    ThongTinXeForViewDto GetThongTinXeForView(int id)
+        public    ThongTinXeForViewDto GetThongTinXeForView(string soXe)
         {
-            return thongTinXeAppService.GetThongTinXeForView(id);
+            return thongTinXeAppService.GetThongTinXeForView(soXe);
         }
         [HttpGet]
-        public ThongTinXeInput GetThongTinSeForEdit(int id)
+        public ThongTinXeInput GetThongTinSeForEdit(string soXe)
         {
-            return thongTinXeAppService.GetThongTinXeForEdit(id);
+            return thongTinXeAppService.GetThongTinXeForEdit(soXe);
         }
         [HttpPost]
         public   void CreateOrEditThongTinXe([FromBody]ThongTinXeInput input)
         {
              thongTinXeAppService.CreateOrEditThongTinXe(input);
+        }
+
+        [HttpDelete("{id}")]
+        public void DeleteThongTinXe(string soXe)
+        {
+            thongTinXeAppService.DeleteThongTinXe(soXe);
         }
 
     }

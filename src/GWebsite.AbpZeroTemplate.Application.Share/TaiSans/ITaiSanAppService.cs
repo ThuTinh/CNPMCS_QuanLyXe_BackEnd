@@ -11,9 +11,9 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.TaiSans
   public  interface ITaiSanAppService
     {
         void CreateOrEditTaiSan(TaiSanInput taiSanInput);
-        TaiSanInput GetTaiSanForEdit(int id);
+        TaiSanInput GetTaiSanForEdit(string maTaiSan);
         void DeleteTaiSan(int id);
         PagedResultDto<TaiSanDto> GetTaiSans(TaiSanFilter filter);
-        TaiSanForViewDto GetTaiSanForView(int id);
+        TaiSanForViewDto GetTaiSanForView(string maTaiSan);
     }
 }

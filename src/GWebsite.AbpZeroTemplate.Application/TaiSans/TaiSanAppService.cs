@@ -69,9 +69,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.TaiSans
             }
         }
 
-        public TaiSanInput GetTaiSanForEdit(int id)
+        public TaiSanInput GetTaiSanForEdit(string maTaiSan)
         {
-            var taisanEntity = taiSanRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var taisanEntity = taiSanRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.maTaiSan == maTaiSan);
             if (taisanEntity != null)
             {
                 return ObjectMapper.Map<TaiSanInput>(taisanEntity);
@@ -81,9 +81,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.TaiSans
 
         }
 
-        public TaiSanForViewDto GetTaiSanForView(int id)
+        public TaiSanForViewDto GetTaiSanForView(string maTaiSan)
         {
-            var taisanEntity = taiSanRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var taisanEntity = taiSanRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.maTaiSan == maTaiSan);
             if (taisanEntity != null)
             {
                 return ObjectMapper.Map<TaiSanForViewDto>(taisanEntity);

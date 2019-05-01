@@ -11,10 +11,10 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes
     public interface IThongTinXeAppService
     {
         void CreateOrEditThongTinXe( ThongTinXeInput thongTinXeInput);
-        ThongTinXeInput GetThongTinXeForEdit(int id);
-        void DeleteThongTinXe(int id);
+        ThongTinXeInput GetThongTinXeForEdit(string soXe);
+        void DeleteThongTinXe(string soXe);
         PagedResultDto<ThongTinXeDto> GetThongTinXes(ThongTinXeFilter filter);
-        ThongTinXeForViewDto GetThongTinXeForView(int id);
+        ThongTinXeForViewDto GetThongTinXeForView(string soXe);
 
 
     }

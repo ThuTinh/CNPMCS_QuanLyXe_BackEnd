@@ -28,5 +28,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto
         public string chieuCao { get; set; }
         public string chieuNgang { get; set; }
         public string trangThaiDuyet { get; set; }
+        public string donViSuDung { get; set; }
+        public string tenChuPhuongTien { get; set; }
     }
 }

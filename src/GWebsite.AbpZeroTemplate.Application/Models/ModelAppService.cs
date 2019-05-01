@@ -77,9 +77,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.Models
                 return null;
         }
 
-        public ModelForViewDto GetModelForView(int id)
+        public ModelForViewDto GetModelForView(string model)
         {
-            var modelEntity = modelRepository.GetAll().Where(x => x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var modelEntity = modelRepository.GetAll().Where(x => x.IsDelete).SingleOrDefault(x => x.model == model);
             if (modelEntity == null)
                 return null;
             else

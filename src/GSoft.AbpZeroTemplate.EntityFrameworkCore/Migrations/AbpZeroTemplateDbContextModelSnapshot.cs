@@ -1861,6 +1861,8 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("coLopSuDung");
 
+                    b.Property<string>("donViSuDung");
+
                     b.Property<string>("kieuDongCo");
 
                     b.Property<string>("loaiHopSo");
@@ -1886,6 +1888,8 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.Property<string>("soSuon");
 
                     b.Property<string>("soXe");
+
+                    b.Property<string>("tenChuPhuongTien");
 
                     b.Property<string>("theTichDongCo");
 

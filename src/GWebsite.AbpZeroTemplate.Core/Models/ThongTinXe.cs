@@ -12,6 +12,8 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
         public string model { get; set; }
         public string nuocSanXuat { get; set; }
         public string loaiNhienLieu { get; set; }
+        public string donViSuDung { get; set; }
+        public string tenChuPhuongTien { get; set; }
         public int? namSanXuat { get; set; }
         public string mauXe { get; set; }
         public string maTaiSan { get; set; }

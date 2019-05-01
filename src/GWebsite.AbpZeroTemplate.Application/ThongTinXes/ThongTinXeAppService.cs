@@ -60,9 +60,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             }
         }
 
-        public void DeleteThongTinXe(int id)
+        public void DeleteThongTinXe(string soXe)
         {
-            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.soXe == soXe);
             if(thongTinXeEntity!=null)
             {
                 thongTinXeEntity.IsDelete = true;
@@ -112,9 +112,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             return new PagedResultDto<ThongTinXeDto>(total, items.Select(item => ObjectMapper.Map<ThongTinXeDto>(item)).ToList());
         }
 
-        public ThongTinXeInput GetThongTinXeForEdit(int id)
+        public ThongTinXeInput GetThongTinXeForEdit(string soXe)
         {
-            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x=>x.Id==id);
+            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x=>x.soXe==soXe);
             if(thongTinXeEntity!=null)
             {
                 return ObjectMapper.Map<ThongTinXeInput>(thongTinXeEntity);
@@ -122,9 +122,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             return null;
         }
 
-        public ThongTinXeForViewDto GetThongTinXeForView(int id)
+        public ThongTinXeForViewDto GetThongTinXeForView(string soXe)
         {
-            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var thongTinXeEntity = thongTinXeRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.soXe == soXe);
             if(thongTinXeEntity!=null)
             {
                 return ObjectMapper.Map<ThongTinXeForViewDto>(thongTinXeEntity);

@@ -24,15 +24,15 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
             return taiSanAppService.GetTaiSans(filter);
         }
         [HttpGet]
-        public TaiSanInput GetTaiSanForEdit(int id)
+        public TaiSanInput GetTaiSanForEdit(string maTaiSan)
         {
-            return taiSanAppService.GetTaiSanForEdit(id);
+            return taiSanAppService.GetTaiSanForEdit(maTaiSan);
         }
 
         [HttpGet]
-        public TaiSanForViewDto GetTaiSanForView(int id)
+        public TaiSanForViewDto GetTaiSanForView(string maTaiSan)
         {
-            return taiSanAppService.GetTaiSanForView(id);
+            return taiSanAppService.GetTaiSanForView(maTaiSan);
         }
         [HttpPost]
         public void CreateOrEditTaiSan([FromBody]TaiSanInput input)

@@ -14,6 +14,6 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.Models
         ModelInput GetModelForEdit(int id);
         void DeleteModel( int id);
         PagedResultDto<ModelDto> GetModels(ModelFilter input);
-        ModelForViewDto GetModelForView(int id);
+        ModelForViewDto GetModelForView(string model);
     }
 }
