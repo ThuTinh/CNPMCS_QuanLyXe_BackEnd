@@ -1724,6 +1724,33 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("GPermissions");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Xe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<string>("Gia");
+
+                    b.Property<string>("Hang");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("Ten");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Xes");
+                });
+
             modelBuilder.Entity("GSoft.AbpZeroTemplate.Editions.SubscribableEdition", b =>
                 {
                     b.HasBaseType("Abp.Application.Editions.Edition");

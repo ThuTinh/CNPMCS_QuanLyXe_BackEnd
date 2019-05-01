@@ -13,6 +13,7 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         where TUser : AbpUser<TUser>
         where TSelf : GWebsiteDbContext<TTenant, TRole, TUser, TSelf>
     {
+        public virtual DbSet<Xe> Xes { get; set; }
         public virtual DbSet<Announcement> Announcements { get; set; }
         public virtual DbSet<AnnouncementUser> AnnouncementUsers { get; set; }
         public virtual DbSet<AppRole> AppRoles { get; set; }

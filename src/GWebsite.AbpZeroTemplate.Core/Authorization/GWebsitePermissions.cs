@@ -23,6 +23,11 @@
         public const string Pages_Administration_Customer_Create = "Pages.Administration.Customer.Create";
         public const string Pages_Administration_Customer_Edit = "Pages.Administration.Customer.Edit";
         public const string Pages_Administration_Customer_Delete = "Pages.Administration.Customer.Delete";
+        
+        public const string Pages_Administration_Xe = "Pages.Administration.Xe";
+        public const string Pages_Administration_Xe_Create = "Pages.Administration.Xe.Create";
+        public const string Pages_Administration_Xe_Edit = "Pages.Administration.Xe.Edit";
+        public const string Pages_Administration_Xe_Delete = "Pages.Administration.Xe.Delete";
 
     }
 }
