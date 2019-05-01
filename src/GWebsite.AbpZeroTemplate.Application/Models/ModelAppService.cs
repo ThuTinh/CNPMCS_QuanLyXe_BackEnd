@@ -66,9 +66,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.Models
             }
         }
 
-        public ModelInput GetModelForEdit(int id)
+        public ModelInput GetModelForEdit(string model)
         {
-            var modelEntity = modelRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
+            var modelEntity = modelRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.model == model);
             if (modelEntity != null)
             {
                 return ObjectMapper.Map<ModelInput>(modelEntity);
@@ -79,7 +79,7 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.Models
 
         public ModelForViewDto GetModelForView(string model)
         {
-            var modelEntity = modelRepository.GetAll().Where(x => x.IsDelete).SingleOrDefault(x => x.model == model);
+            var modelEntity = modelRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.model == model);
             if (modelEntity == null)
                 return null;
             else

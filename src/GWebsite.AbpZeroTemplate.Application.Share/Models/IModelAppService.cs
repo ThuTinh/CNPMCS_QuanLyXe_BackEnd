@@ -11,7 +11,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.Models
     public interface IModelAppService
     {
         void CreateOrEditModel(ModelInput modelInput);
-        ModelInput GetModelForEdit(int id);
+        ModelInput GetModelForEdit(string model);
         void DeleteModel( int id);
         PagedResultDto<ModelDto> GetModels(ModelFilter input);
         ModelForViewDto GetModelForView(string model);

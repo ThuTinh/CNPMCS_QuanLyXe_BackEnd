@@ -40,10 +40,10 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
              thongTinXeAppService.CreateOrEditThongTinXe(input);
         }
 
-        [HttpDelete("{id}")]
-        public void DeleteThongTinXe(string soXe)
+        [HttpDelete("{soxe}")]
+        public void DeleteThongTinXe(string soxe)
         {
-            thongTinXeAppService.DeleteThongTinXe(soXe);
+            thongTinXeAppService.DeleteThongTinXe(soxe);
         }
 
     }

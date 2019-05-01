@@ -29,9 +29,9 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
         }
 
         [HttpGet]
-        public ModelInput GetModelForEdit(int id)
+        public ModelInput GetModelForEdit(string model)
         {
-            return modelAppService.GetModelForEdit(id);
+            return modelAppService.GetModelForEdit(model);
         }
 
         [HttpPost]
