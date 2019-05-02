@@ -9,7 +9,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ModelDemos");
+                name: "DemoModels");
 
             migrationBuilder.CreateTable(
                 name: "Xes",
@@ -38,7 +38,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
                 name: "Xes");
 
             migrationBuilder.CreateTable(
-                name: "ModelDemos",
+                name: "DemoModels",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -53,7 +53,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ModelDemos", x => x.Id);
+                    table.PrimaryKey("PK_DemoModels", x => x.Id);
                 });
         }
     }

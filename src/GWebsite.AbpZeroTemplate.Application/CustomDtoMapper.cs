@@ -1,4 +1,6 @@
 using AutoMapper;
+using GWebsite.AbpZeroTemplate.Application.Share.QuanLyVanHanhs.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.ThongTinBaoDuongs.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.Customers.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.Xes.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.DemoModels.Dto;
@@ -33,6 +35,18 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<XeInput, Xe>();
             configuration.CreateMap<Xe, XeInput>();
             configuration.CreateMap<Xe, XeForViewDto>();
+
+            // Quan ly van hanh
+            configuration.CreateMap<QuanLyVanHanh, QuanLyVanHanhDto>();
+            configuration.CreateMap<QuanLyVanHanhInput, QuanLyVanHanh>();
+            configuration.CreateMap<QuanLyVanHanh, QuanLyVanHanhInput>();
+            configuration.CreateMap<QuanLyVanHanh, QuanLyVanHanhForViewDto>();    
+            
+            // Thong tin bao duong 
+            configuration.CreateMap<ThongTinBaoDuong, ThongTinBaoDuongDto>();
+            configuration.CreateMap<ThongTinBaoDuongInput, ThongTinBaoDuong>();
+            configuration.CreateMap<ThongTinBaoDuong, ThongTinBaoDuongInput>();
+            configuration.CreateMap<ThongTinBaoDuong, ThongTinBaoDuongForViewDto>();
         }
     }
 }
