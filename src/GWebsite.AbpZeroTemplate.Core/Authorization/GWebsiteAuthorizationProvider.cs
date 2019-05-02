@@ -46,6 +46,17 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             customer.CreateChildPermission(GWebsitePermissions.Pages_Administration_Customer_Edit, L("EditingCustomer"));
             customer.CreateChildPermission(GWebsitePermissions.Pages_Administration_Customer_Delete, L("DeletingCustomer"));
 
+            var phiDuongBo = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo, L("PhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Create, L("CreatingNewPhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Edit, L("EditingPhiDuongBo"));
+            phiDuongBo.CreateChildPermission(GWebsitePermissions.Pages_Administration_PhiDuongBo_Delete, L("DeletingPhiDuongBo"));
+
+            var thongTinSuaChua = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua, L("ThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Create, L("CreatingNewThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Edit, L("EditingThongTinSuaChua"));
+            thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Delete, L("DeletingThongTinSuaChua"));
+
+
             var model = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model, L("Model"));
              model.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model_Create, L("CreatingModel"));
             model.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model_Edit, L("EditingModel"));
@@ -65,6 +76,7 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Create, L("CreatingThongTinXe"));
             thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Edit, L("EditingThongTinXe"));
             thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Delete, L("DeletingThongTinXe"));
+
 
         }
 
