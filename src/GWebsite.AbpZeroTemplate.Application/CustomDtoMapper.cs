@@ -1,7 +1,9 @@
-using AutoMapper;
+﻿using AutoMapper;
 using GWebsite.AbpZeroTemplate.Application.Share.Customers.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.DemoModels.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.ThongTinBaoHiems.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.ThongTinDangKiems.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos;
 
 using GWebsite.AbpZeroTemplate.Application.Share.Models.Dto;
@@ -33,6 +35,18 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<CustomerInput, Customer>();
             configuration.CreateMap<Customer, CustomerInput>();
             configuration.CreateMap<Customer, CustomerForViewDto>();
+
+            // thông tin đăng kiểm
+            configuration.CreateMap<ThongTinDangKiem, ThongTinDangKiemDto>();
+            configuration.CreateMap<ThongTinDangKiemInput, ThongTinDangKiem>();
+            configuration.CreateMap<ThongTinDangKiem, ThongTinDangKiemInput>();
+            configuration.CreateMap<ThongTinDangKiem, ThongTinDangKiemForViewDto>();
+            // thông tin bảo hiểm
+            configuration.CreateMap<ThongTinBaoHiem, ThongTinBaoHiemDto>();
+            configuration.CreateMap<ThongTinBaoHiemInput, ThongTinBaoHiem>();
+            configuration.CreateMap<ThongTinBaoHiem, ThongTinBaoHiemInput>();
+            configuration.CreateMap<ThongTinBaoHiem, ThongTinBaoHiemForViewDto>();
+
             // PhiDuongBo
             configuration.CreateMap<PhiDuongBo, PhiDuongBoDTO>();
             configuration.CreateMap<PhiDuongBoInput, PhiDuongBo>();
@@ -67,6 +81,7 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<ThongTinSuaChuaInput, ThongTinSuaChua>();
             configuration.CreateMap<ThongTinSuaChua, ThongTinSuaChuaInput>();
             configuration.CreateMap<ThongTinSuaChua, ThongTinSuaChuaForViewDTO>();
+
 
 
         }
