@@ -27,11 +27,19 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         public virtual DbSet<ThongTinBaoHiem> ThongTinBaoHiems { get; set; }
         public virtual DbSet<ThongTinDangKiem> ThongTinDangKiems { get; set; }
 
+        public virtual DbSet<Model> Models {get;set;}
+        public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
+        public virtual DbSet<TaiSan> TaiSans { get; set; }
+        public virtual DbSet<ThongTinXe> ThongTinXes { get; set; }
+        public virtual DbSet<PhiDuongBo> PhiDuongBos { get; set; }
+        public virtual DbSet<ThongTinSuaChua> ThongTinSuaChuas { get; set; }
+        
         /// <summary>
+        /// 
+        /// 
         /// GPermissions dùng cho bên Gwebsite
         /// </summary>
         public virtual DbSet<Permission> GPermissions { get; set; }
-
         /// <summary>
         /// 
         /// </summary>
