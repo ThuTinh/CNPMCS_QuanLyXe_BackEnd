@@ -56,6 +56,28 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Edit, L("EditingThongTinSuaChua"));
             thongTinSuaChua.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinSuaChua_Delete, L("DeletingThongTinSuaChua"));
 
+
+            var model = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model, L("Model"));
+             model.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model_Create, L("CreatingModel"));
+            model.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model_Edit, L("EditingModel"));
+            model.CreateChildPermission(GWebsitePermissions.Pages_Administration_Model_Delete, L("DeletingModel"));
+
+            var nhacungcap = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_NhaCungCap, L("NhaCungCap"));
+            nhacungcap.CreateChildPermission(GWebsitePermissions.Pages_Administration_NhaCungCap_Create, L("CreatingNhaCungCap"));
+            nhacungcap.CreateChildPermission(GWebsitePermissions.Pages_Administration_NhaCungCap_Edit, L("EditingNhaCungCap"));
+            nhacungcap.CreateChildPermission(GWebsitePermissions.Pages_Administration_NhaCungCap_Delete, L("DeletingNhaCungCap"));
+
+            var taisan = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_TaiSan, L("TaiSan"));
+            taisan.CreateChildPermission(GWebsitePermissions.Pages_Administration_TaiSan_Create, L("CreatingTaiSan"));
+            taisan.CreateChildPermission(GWebsitePermissions.Pages_Administration_TaiSan_Edit, L("EditingTaiSan"));
+            taisan.CreateChildPermission(GWebsitePermissions.Pages_Administration_TaiSan_Delete, L("DeletingTaiSan"));
+
+            var thongtinxe = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe, L("ThongTinXe"));
+            thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Create, L("CreatingThongTinXe"));
+            thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Edit, L("EditingThongTinXe"));
+            thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Delete, L("DeletingThongTinXe"));
+
+
         }
 
         private static ILocalizableString L(string name)

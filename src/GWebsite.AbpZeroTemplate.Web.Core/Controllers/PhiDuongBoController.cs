@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace GWebsite.AbpZeroTemplate.Application.Controllers
 {
     [Route("api/[controller]/[action]")]
-    public class PhiDuongBoController
+    public class PhiDuongBoController : GWebsiteControllerBase
     {
             private readonly IPhiDuongBoAppService phiDuongBoAppService;
 
@@ -34,13 +34,13 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
             [HttpPost]
             public void CreateOrEditPhiDuongBo([FromBody] PhiDuongBoInput input)
             {
-            phiDuongBoAppService.CreateOrEditPhiDuongBo(input);
+                 phiDuongBoAppService.CreateOrEditPhiDuongBo(input);
             }
 
             [HttpDelete("{id}")]
             public void DeletePhiDuongBo(int id)
             {
-            phiDuongBoAppService.DeletePhiDuongBo(id);
+                 phiDuongBoAppService.DeletePhiDuongBo(id);
             }
 
             [HttpGet]

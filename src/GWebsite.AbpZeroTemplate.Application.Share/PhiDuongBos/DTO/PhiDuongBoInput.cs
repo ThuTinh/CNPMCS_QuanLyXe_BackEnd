@@ -10,14 +10,14 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos
 {
     public class PhiDuongBoInput : Entity<int>
     {
-        string soXe { get; set; }
-        string ngayCapNhat { get; set; }
-        string ngayDongPhi { get; set; }
-        string ngayHetHanDongPhi { get; set; }
-        string thoiGianSuDung { get; set; }
-        string soTienThanhToan { get; set; }
-        string congTyThuPhi { get; set; }
-        string loaiPhi { get; set; }
-        string ghiChu { get; set; }
+        public string soXe { get; set; }
+        public string ngayCapNhat { get; set; }
+        public string ngayDongPhi { get; set; }
+        public string ngayHetHanDongPhi { get; set; }
+        public string thoiGianSuDung { get; set; }
+        public string soTienThanhToan { get; set; }
+        public string congTyThuPhi { get; set; }
+        public string loaiPhi { get; set; }
+        public string ghiChu { get; set; }
     }
 }
