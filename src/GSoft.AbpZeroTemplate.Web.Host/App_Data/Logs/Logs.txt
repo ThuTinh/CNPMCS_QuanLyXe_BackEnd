@@ -8662,3 +8662,11 @@ INFO  2019-05-02 21:05:14,457 [5    ] ore.Mvc.Internal.ControllerActionInvoker -
 INFO  2019-05-02 21:05:14,551 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
 INFO  2019-05-02 21:05:14,642 [3    ] ore.Mvc.Internal.ControllerActionInvoker - Executed action GWebsite.AbpZeroTemplate.Application.Controllers.PhiDuongBoController.CreateOrEditPhiDuongBo (GWebsite.AbpZeroTemplate.Web.Core) in 1247.194ms
 INFO  2019-05-02 21:05:14,666 [3    ] soft.AspNetCore.Hosting.Internal.WebHost - Request finished in 2163.798ms 200 application/json; charset=utf-8
+DEBUG 2019-05-02 21:14:04,157 [2    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-05-02 21:14:04,164 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-05-02 21:14:04,164 [2    ] enancy.SubscriptionExpirationCheckWorker - Stop background worker: GSoft.AbpZeroTemplate.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2019-05-02 21:14:04,165 [2    ] cy.SubscriptionExpireEmailNotifierWorker - Stop background worker: GSoft.AbpZeroTemplate.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+DEBUG 2019-05-02 21:14:04,169 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-05-02 21:14:04,169 [2    ] enancy.SubscriptionExpirationCheckWorker - WaitToStop background worker: GSoft.AbpZeroTemplate.MultiTenancy.SubscriptionExpirationCheckWorker
+DEBUG 2019-05-02 21:14:04,169 [2    ] cy.SubscriptionExpireEmailNotifierWorker - WaitToStop background worker: GSoft.AbpZeroTemplate.MultiTenancy.SubscriptionExpireEmailNotifierWorker
+DEBUG 2019-05-02 21:14:04,170 [2    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
