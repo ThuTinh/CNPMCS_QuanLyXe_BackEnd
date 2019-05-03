@@ -1693,6 +1693,78 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("MenuClients");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Model", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<float?>("dinhMucNhienLieu");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("hangSanXuat");
+
+                    b.Property<string>("loaiXe");
+
+                    b.Property<string>("model");
+
+                    b.Property<string>("tenModel");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Models");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.NhaCungCap", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("diaChi");
+
+                    b.Property<string>("email");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<bool>("hoatDong");
+
+                    b.Property<string>("maCongTyBaoHiem");
+
+                    b.Property<string>("maSoThue");
+
+                    b.Property<string>("nguoiLienHe");
+
+                    b.Property<string>("soDienThoai");
+
+                    b.Property<string>("tenCongTyBaoHiem");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NhaCungCaps");
+                });
+
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Permission", b =>
                 {
                     b.Property<int>("Id")
@@ -1722,6 +1794,45 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("GPermissions");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.PhiDuongBo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("congTyThuPhi");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("loaiPhi");
+
+                    b.Property<string>("ngayCapNhat");
+
+                    b.Property<string>("ngayDongPhi");
+
+                    b.Property<string>("ngayHetHanDongPhi");
+
+                    b.Property<string>("soTienThanhToan");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<string>("thoiGianSuDung");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PhiDuongBos");
                 });
 
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.QuanLyVanHanh", b =>
@@ -1755,6 +1866,47 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("QuanLyVanHanhs");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.TaiSan", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("donViSuDung");
+
+                    b.Property<string>("loaiTaiSan");
+
+                    b.Property<string>("maTaiSan");
+
+                    b.Property<string>("nguoiSuDung");
+
+                    b.Property<long?>("nguyenGiaTaiSan");
+
+                    b.Property<string>("nhomTaiSan");
+
+                    b.Property<string>("tenTaiSan");
+
+                    b.Property<string>("thongTinMoTa");
+
+                    b.Property<string>("tinhTrangKhauHao");
+
+                    b.Property<string>("tinhTrangTaiSan");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TaiSans");
                 });
 
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinBaoDuong", b =>
@@ -1792,7 +1944,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("ThongTinBaoDuongs");
                 });
 
-            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.Xe", b =>
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinBaoHiem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1802,21 +1954,166 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("CreatedDate");
 
-                    b.Property<string>("Gia");
-
-                    b.Property<string>("Hang");
-
                     b.Property<bool>("IsDelete");
-
-                    b.Property<string>("Ten");
 
                     b.Property<string>("UpdatedBy");
 
                     b.Property<DateTime?>("UpdatedDate");
 
+                    b.Property<string>("congTyBaoHiem");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("loaiBaoHiem");
+
+                    b.Property<DateTime>("ngayHetHanBaoHiem");
+
+                    b.Property<DateTime>("ngayMuaBaoHiem");
+
+                    b.Property<int?>("soTienThanhToan");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<DateTime>("thoiHanBaoHiem");
+
+                    b.Property<string>("trangThaiDuyet");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Xes");
+                    b.ToTable("ThongTinBaoHiems");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinDangKiem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("coQuanDangKiem");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<DateTime>("ngayDangKiem");
+
+                    b.Property<DateTime>("ngayHetHanDangKiem");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<DateTime>("thoiHanDangKiem");
+
+                    b.Property<string>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinDangKiems");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinSuaChua", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("chiPhiSuaChua");
+
+                    b.Property<string>("ghiChu");
+
+                    b.Property<string>("ngayDuKienSuaXong");
+
+                    b.Property<string>("ngaySuaChua");
+
+                    b.Property<string>("noiDungSuaChuaThucTe");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<bool>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinSuaChuas");
+                });
+
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinXe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("chieuCao");
+
+                    b.Property<string>("chieuDai");
+
+                    b.Property<string>("chieuNgang");
+
+                    b.Property<string>("coLopSuDung");
+
+                    b.Property<string>("donViSuDung");
+
+                    b.Property<string>("kieuDongCo");
+
+                    b.Property<string>("loaiHopSo");
+
+                    b.Property<string>("loaiNhienLieu");
+
+                    b.Property<string>("maTaiSan");
+
+                    b.Property<string>("mauXe");
+
+                    b.Property<string>("model");
+
+                    b.Property<string>("mucDichSuDung");
+
+                    b.Property<int?>("namSanXuat");
+
+                    b.Property<DateTime?>("ngayDangKiBanDau");
+
+                    b.Property<string>("nuocSanXuat");
+
+                    b.Property<string>("soMay");
+
+                    b.Property<string>("soSuon");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<string>("tenChuPhuongTien");
+
+                    b.Property<string>("theTichDongCo");
+
+                    b.Property<string>("trangThaiDuyet");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThongTinXes");
                 });
 
             modelBuilder.Entity("GSoft.AbpZeroTemplate.Editions.SubscribableEdition", b =>
