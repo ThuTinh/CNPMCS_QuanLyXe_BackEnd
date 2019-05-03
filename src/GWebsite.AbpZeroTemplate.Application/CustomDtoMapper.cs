@@ -30,11 +30,7 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<Customer, CustomerInput>();
             configuration.CreateMap<Customer, CustomerForViewDto>();
 
-            // Xe
-            configuration.CreateMap<Xe, XeDto>();
-            configuration.CreateMap<XeInput, Xe>();
-            configuration.CreateMap<Xe, XeInput>();
-            configuration.CreateMap<Xe, XeForViewDto>();
+           
 
             // Quan ly van hanh
             configuration.CreateMap<QuanLyVanHanh, QuanLyVanHanhDto>();
