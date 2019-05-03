@@ -13,6 +13,9 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         where TUser : AbpUser<TUser>
         where TSelf : GWebsiteDbContext<TTenant, TRole, TUser, TSelf>
     {
+       
+        public virtual DbSet<QuanLyVanHanh> QuanLyVanHanhs { get; set; }
+        public virtual DbSet<ThongTinBaoDuong> ThongTinBaoDuongs { get; set; }
         public virtual DbSet<Announcement> Announcements { get; set; }
         public virtual DbSet<AnnouncementUser> AnnouncementUsers { get; set; }
         public virtual DbSet<AppRole> AppRoles { get; set; }
@@ -24,15 +27,22 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         public virtual DbSet<MenuClient> MenuClients { get; set; }
         public virtual DbSet<DemoModel> DemoModels { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<ThongTinBaoHiem> ThongTinBaoHiems { get; set; }
+        public virtual DbSet<ThongTinDangKiem> ThongTinDangKiems { get; set; }
+
         public virtual DbSet<Model> Models {get;set;}
         public virtual DbSet<NhaCungCap> NhaCungCaps { get; set; }
         public virtual DbSet<TaiSan> TaiSans { get; set; }
         public virtual DbSet<ThongTinXe> ThongTinXes { get; set; }
+        public virtual DbSet<PhiDuongBo> PhiDuongBos { get; set; }
+        public virtual DbSet<ThongTinSuaChua> ThongTinSuaChuas { get; set; }
+        
         /// <summary>
+        /// 
+        /// 
         /// GPermissions dùng cho bên Gwebsite
         /// </summary>
         public virtual DbSet<Permission> GPermissions { get; set; }
-
         /// <summary>
         /// 
         /// </summary>

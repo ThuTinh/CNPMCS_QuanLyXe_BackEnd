@@ -23,6 +23,30 @@
         public const string Pages_Administration_Customer_Create = "Pages.Administration.Customer.Create";
         public const string Pages_Administration_Customer_Edit = "Pages.Administration.Customer.Edit";
         public const string Pages_Administration_Customer_Delete = "Pages.Administration.Customer.Delete";
+        
+          
+        
+        public const string Pages_Administration_QuanLyVanHanh = "Pages.Administration.QuanLyVanHanh";
+        public const string Pages_Administration_QuanLyVanHanh_Create = "Pages.Administration.QuanLyVanHanh.Create";
+        public const string Pages_Administration_QuanLyVanHanh_Edit = "Pages.Administration.QuanLyVanHanh.Edit";
+        public const string Pages_Administration_QuanLyVanHanh_Delete = "Pages.Administration.QuanLyVanHanh.Delete";  
+        
+        public const string Pages_Administration_ThongTinBaoDuong = "Pages.Administration.ThongTinBaoDuong";
+        public const string Pages_Administration_ThongTinBaoDuong_Create = "Pages.Administration.ThongTinBaoDuong.Create";
+        public const string Pages_Administration_ThongTinBaoDuong_Edit = "Pages.Administration.ThongTinBaoDuong.Edit";
+        public const string Pages_Administration_ThongTinBaoDuong_Delete = "Pages.Administration.ThongTinBaoDuong.Delete";
+
+
+        public const string Pages_Administration_ThongTinBaoHiem = "Pages.Administration.ThongTinBaoHiem";
+        public const string Pages_Administration_ThongTinBaoHiem_Create = "Pages.Administration.ThongTinBaoHiem.Create";
+        public const string Pages_Administration_ThongTinBaoHiem_Edit = "Pages.Administration.ThongTinBaoHiem.Edit";
+        public const string Pages_Administration_ThongTinBaoHiem_Delete = "Pages.Administration.ThongTinBaoHiem.Delete";
+
+
+        public const string Pages_Administration_ThongTinDangKiem = "Pages.Administration.ThongTinDangKiem";
+        public const string Pages_Administration_ThongTinDangKiem_Create = "Pages.Administration.ThongTinDangKiem.Create";
+        public const string Pages_Administration_ThongTinDangKiem_Edit = "Pages.Administration.ThongTinDangKiem.Edit";
+        public const string Pages_Administration_ThongTinDangKiem_Delete = "Pages.Administration.ThongTinDangKiem.Delete";
 
         public const string Pages_Administration_Model = "Pages.Administration.Model";
         public const string Pages_Administration_Model_Create = "Pages.Administration.Model.Create";
@@ -44,6 +68,15 @@
         public const string Pages_Administration_ThongTinXe_Edit = "Pages.Administration.ThongTinXe.Edit";
         public const string Pages_Administration_ThongTinXe_Delete = "Pages.Administration.ThongTinXe.Delete";
 
+        public const string Pages_Administration_PhiDuongBo = "Pages.Administration.PhiDuongBo";
+        public const string Pages_Administration_PhiDuongBo_Create = "Pages.Administration.PhiDuongBo.Create";
+        public const string Pages_Administration_PhiDuongBo_Edit = "Pages.Administration.PhiDuongBo.Edit";
+        public const string Pages_Administration_PhiDuongBo_Delete = "Pages.Administration.PhiDuongBo.Delete";
+
+        public const string Pages_Administration_ThongTinSuaChua = "Pages.Administration.ThongTinSuaChua";
+        public const string Pages_Administration_ThongTinSuaChua_Create = "Pages.Administration.ThongTinSuaChua.Create";
+        public const string Pages_Administration_ThongTinSuaChua_Edit = "Pages.Administration.ThongTinSuaChua.Edit";
+        public const string Pages_Administration_ThongTinSuaChua_Delete = "Pages.Administration.ThongTinSuaChua.Delete";
 
 
     }
