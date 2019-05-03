@@ -1,0 +1,19 @@
+﻿using Abp.Domain.Entities;
+using GWebsite.AbpZeroTemplate.Core.Models;
+using System;
+
+namespace GWebsite.AbpZeroTemplate.Application.Share.QuanLyVanHanhs.Dto
+{
+    /// <summary>
+    /// <model cref="QuanLyVanHanh"></model>
+    /// </summary>
+    public class QuanLyVanHanhDto : Entity<int>
+    {
+        public string SoXe { get; set; }
+        public DateTime? NgayCapNhat { get; set; }
+        public int? SoKM { get; set; }
+        public int? XangTieuThu { get; set; }
+        public int? TrangThaiDaDuyet { get; set; }
+        public string GhiChu { get; set; }
+    }
+}

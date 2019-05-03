@@ -718,6 +718,29 @@ namespace GSoft.AbpZeroTemplate.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "QuanLyVanHanhs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CreatedDate = table.Column<DateTime>(nullable: true),
+                    CreatedBy = table.Column<string>(nullable: true),
+                    UpdatedDate = table.Column<DateTime>(nullable: true),
+                    UpdatedBy = table.Column<string>(nullable: true),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    SoXe = table.Column<string>(nullable: true),
+                    NgayCapNhat = table.Column<DateTime>(nullable: true),
+                    SoKM = table.Column<int>(nullable: true),
+                    XangTieuThu = table.Column<int>(nullable: true),
+                    TrangThaiDaDuyet = table.Column<int>(nullable: true),
+                    GhiChu = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_QuanLyVanHanhs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TaiSans",
                 columns: table => new
                 {
@@ -742,6 +765,30 @@ namespace GSoft.AbpZeroTemplate.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TaiSans", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ThongTinBaoDuongs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    CreatedDate = table.Column<DateTime>(nullable: true),
+                    CreatedBy = table.Column<string>(nullable: true),
+                    UpdatedDate = table.Column<DateTime>(nullable: true),
+                    UpdatedBy = table.Column<string>(nullable: true),
+                    IsDelete = table.Column<bool>(nullable: false),
+                    SoXe = table.Column<string>(nullable: true),
+                    NgayBaoDuong = table.Column<DateTime>(nullable: true),
+                    NgayBaoDuongTiepTheo = table.Column<DateTime>(nullable: true),
+                    SoTienThanhToan = table.Column<int>(nullable: true),
+                    HangMucBaoDuong = table.Column<string>(nullable: true),
+                    DonViBaoDuong = table.Column<string>(nullable: true),
+                    TrangThaiDuyet = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ThongTinBaoDuongs", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -1921,7 +1968,13 @@ namespace GSoft.AbpZeroTemplate.Migrations
                 name: "PhiDuongBos");
 
             migrationBuilder.DropTable(
+                name: "QuanLyVanHanhs");
+
+            migrationBuilder.DropTable(
                 name: "TaiSans");
+
+            migrationBuilder.DropTable(
+                name: "ThongTinBaoDuongs");
 
             migrationBuilder.DropTable(
                 name: "ThongTinBaoHiems");
