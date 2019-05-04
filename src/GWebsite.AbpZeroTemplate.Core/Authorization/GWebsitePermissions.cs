@@ -78,6 +78,12 @@
         public const string Pages_Administration_ThongTinSuaChua_Edit = "Pages.Administration.ThongTinSuaChua.Edit";
         public const string Pages_Administration_ThongTinSuaChua_Delete = "Pages.Administration.ThongTinSuaChua.Delete";
 
+        public const string Pages_Administration_HoaDonVanHanhXe = "Pages.Administration.HoaDonVanHanhXe";
+        public const string Pages_Administration_HoaDonVanHanhXe_Create = "Pages.Administration.HoaDonVanHanhXe.Create";
+        public const string Pages_Administration_HoaDonVanHanhXe_Edit = "Pages.Administration.HoaDonVanHanhXe.Edit";
+        public const string Pages_Administration_HoaDonVanHanhXe_Delete = "Pages.Administration.HoaDonVanHanhXe.Delete";
+
+
 
     }
 }

@@ -36,6 +36,7 @@ namespace GWebsite.AbpZeroTemplate.EntityFrameworkCore
         public virtual DbSet<ThongTinXe> ThongTinXes { get; set; }
         public virtual DbSet<PhiDuongBo> PhiDuongBos { get; set; }
         public virtual DbSet<ThongTinSuaChua> ThongTinSuaChuas { get; set; }
+        public virtual DbSet<HoaDonVanHanhXe> HoaDonVanHanhXes { get; set; }
         
         /// <summary>
         /// 

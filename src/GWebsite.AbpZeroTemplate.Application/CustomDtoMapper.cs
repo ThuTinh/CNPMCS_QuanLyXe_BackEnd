@@ -16,6 +16,7 @@ using GWebsite.AbpZeroTemplate.Application.Share.TaiSans.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinSuaChuas.DTO;
 using GWebsite.AbpZeroTemplate.Core.Models;
+using GWebsite.AbpZeroTemplate.Application.Share.HoaDonVanHanhXes.Dto;
 
 namespace GWebsite.AbpZeroTemplate.Applications
 {
@@ -98,6 +99,13 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<ThongTinSuaChuaInput, ThongTinSuaChua>();
             configuration.CreateMap<ThongTinSuaChua, ThongTinSuaChuaInput>();
             configuration.CreateMap<ThongTinSuaChua, ThongTinSuaChuaForViewDTO>();
+
+            //hoadonvanhanhxe
+            configuration.CreateMap<HoaDonVanHanhXe, HoaDonVanHanhXeDto>();
+            configuration.CreateMap<HoaDonVanHanhXeInput, HoaDonVanHanhXe>();
+            configuration.CreateMap<HoaDonVanHanhXe, HoaDonVanHanhXeInput>();
+            configuration.CreateMap<HoaDonVanHanhXe, HoaDonVanHanhXeForViewDto>();
+
 
 
 

@@ -101,6 +101,11 @@ namespace GWebsite.AbpZeroTemplate.Core.Authorization
             thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Edit, L("EditingThongTinXe"));
             thongtinxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_ThongTinXe_Delete, L("DeletingThongTinXe"));
 
+            var hoadonvanhanhxe = gwebsite.CreateChildPermission(GWebsitePermissions.Pages_Administration_HoaDonVanHanhXe, L("HoaDonVanHanhXe"));
+            hoadonvanhanhxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_HoaDonVanHanhXe_Create, L("CreatingHoaDonVanHanhXe"));
+            hoadonvanhanhxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_HoaDonVanHanhXe_Edit, L("EditingHoaDonVanHanhXe"));
+            hoadonvanhanhxe.CreateChildPermission(GWebsitePermissions.Pages_Administration_HoaDonVanHanhXe_Delete, L("DeletingHoaDonVanHanhXe"));
+
 
 
 
