@@ -13,7 +13,7 @@ using System.Linq.Dynamic.Core;
 namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinBaoHiems
 {
     [AbpAuthorize(GWebsitePermissions.Pages_Administration_MenuClient)]
-    public class ThongTinBaoHiemAppService : GWebsiteAppServiceBase, IThongTinBaoHiemAppService
+    public class ThongTinBaoHiemAppService : GWebsiteAppServiceBase,IThongTinBaoHiemAppService
     {
         private readonly IRepository<ThongTinBaoHiem> thongTinBaoHiemRepository;
 
@@ -36,9 +36,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinBaoHiems
             }
         }
 
-        public void DeleteThongTinBaoHiem(int soXe)
+        public void DeleteThongTinBaoHiem(int id)
         {
-            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == soXe);
+            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
             if (thongTinBaoHiemEntity != null)
             {
                 thongTinBaoHiemEntity.IsDelete = true;
@@ -47,9 +47,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinBaoHiems
             }
         }
 
-        public ThongTinBaoHiemInput GetThongTinBaoHiemForEdit(int soXe)
+        public ThongTinBaoHiemInput GetThongTinBaoHiemForEdit(int id)
         {
-            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == soXe);
+            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id);
             if (thongTinBaoHiemEntity == null)
             {
                 return null;
@@ -57,9 +57,9 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinBaoHiems
             return ObjectMapper.Map<ThongTinBaoHiemInput>(thongTinBaoHiemEntity);
         }
 
-        public ThongTinBaoHiemForViewDto GetThongTinBaoHiemForView(int soXe)
+        public ThongTinBaoHiemForViewDto GetThongTinBaoHiemForView(int id)
         {
-            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == soXe);
+            var thongTinBaoHiemEntity = thongTinBaoHiemRepository.GetAll().Where(x => !x.IsDelete).SingleOrDefault(x => x.Id == id );
             if (thongTinBaoHiemEntity == null)
             {
                 return null;

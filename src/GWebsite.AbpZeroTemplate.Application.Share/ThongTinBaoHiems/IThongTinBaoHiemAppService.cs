@@ -11,10 +11,10 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinBaoHiems
     public interface IThongTinBaoHiemAppService
     {
         void CreateOrEditThongTinBaoHiem(ThongTinBaoHiemInput thongTinBaoHiemInput);
-        ThongTinBaoHiemInput GetThongTinBaoHiemForEdit(int soXe);
-        void DeleteThongTinBaoHiem(int soXe);
+        ThongTinBaoHiemInput GetThongTinBaoHiemForEdit(int id);
+        void DeleteThongTinBaoHiem(int id);
         PagedResultDto<ThongTinBaoHiemDto> GetThongTinBaoHiems(ThongTinBaoHiemFilter input);
-        ThongTinBaoHiemForViewDto GetThongTinBaoHiemForView(int soXe);
+        ThongTinBaoHiemForViewDto GetThongTinBaoHiemForView(int id);
     }
 }
 

@@ -1999,21 +1999,21 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("loaiBaoHiem");
 
-                    b.Property<DateTime>("ngayHetHanBaoHiem");
+                    b.Property<DateTime?>("ngayHetHanBaoHiem");
 
-                    b.Property<DateTime>("ngayMuaBaoHiem");
+                    b.Property<DateTime?>("ngayMuaBaoHiem");
 
                     b.Property<int?>("soTienThanhToan");
 
                     b.Property<string>("soXe");
 
-                    b.Property<DateTime>("thoiHanBaoHiem");
+                    b.Property<int?>("thoiHanBaoHiem");
 
                     b.Property<string>("trangThaiDuyet");
 
                     b.HasKey("Id");
 
-                    b.ToTable("ThongTinBaoHiems");
+                    b.ToTable("ThongTinBaoHiem");
                 });
 
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinDangKiem", b =>
