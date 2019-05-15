@@ -17,6 +17,7 @@ using GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinSuaChuas.DTO;
 using GWebsite.AbpZeroTemplate.Core.Models;
 using GWebsite.AbpZeroTemplate.Application.Share.HoaDonVanHanhXes.Dto;
+using GWebsite.AbpZeroTemplate.Application.Share.ThietBiKemTheos.Dto;
 
 namespace GWebsite.AbpZeroTemplate.Applications
 {
@@ -107,6 +108,14 @@ namespace GWebsite.AbpZeroTemplate.Applications
             configuration.CreateMap<HoaDonVanHanhXe, HoaDonVanHanhXeForViewDto>();
 
 
+            //ThietBiKemTheo
+            configuration.CreateMap<ThietBiKemTheo, ThietBiKemTheoDto>();
+            configuration.CreateMap<ThietBiKemTheoInput, ThietBiKemTheo>();
+            configuration.CreateMap<ThietBiKemTheo, ThietBiKemTheoInput>();
+            configuration.CreateMap<ThietBiKemTheo, ThietBiKemTheoForViewDto>();
+
+
+           
 
 
         }

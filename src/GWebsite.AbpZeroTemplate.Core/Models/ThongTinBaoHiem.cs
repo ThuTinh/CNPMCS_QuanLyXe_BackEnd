@@ -14,7 +14,7 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
         public int? thoiHanBaoHiem { get; set; }
         public string congTyBaoHiem { get; set; }
         public string loaiBaoHiem { get; set; }
-        public int? soTienThanhToan { get; set; }
+        public double? soTienThanhToan { get; set; }
         public string trangThaiDuyet { get; set; }
         public string ghiChu { get; set; }
     }

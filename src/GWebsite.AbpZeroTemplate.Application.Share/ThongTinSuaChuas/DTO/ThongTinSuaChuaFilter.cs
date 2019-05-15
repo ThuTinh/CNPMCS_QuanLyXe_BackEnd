@@ -11,8 +11,8 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinSuaChuas.DTO
     public class ThongTinSuaChuaFilter : PagedAndSortedInputDto
     {
         public string soXe { get; set; }
-        public string ngaySuaChua { get; set; }
-        public string chiPhiSuaChua { get; set; }
-        public bool trangThaiDuyet { get; set; }
+        public DateTime ngaySuaChua { get; set; }
+        public DateTime chiPhiSuaChua { get; set; }
+        public string trangThaiDuyet { get; set; }
     }
 }

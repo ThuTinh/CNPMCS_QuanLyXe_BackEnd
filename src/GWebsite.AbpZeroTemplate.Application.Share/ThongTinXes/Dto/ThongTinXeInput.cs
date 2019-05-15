@@ -23,10 +23,10 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto
         public string coLopSuDung { get; set; }
         public string kieuDongCo { get; set; }
         public string loaiHopSo { get; set; }
-        public string theTichDongCo { get; set; }
-        public string chieuDai { get; set; }
-        public string chieuCao { get; set; }
-        public string chieuNgang { get; set; }
+        public float? theTichDongCo { get; set; }
+        public float? chieuDai { get; set; }
+        public float? chieuCao { get; set; }
+        public float? chieuNgang { get; set; }
         public string trangThaiDuyet { get; set; }
         public string donViSuDung { get; set; }
         public string tenChuPhuongTien { get; set; }

@@ -14,6 +14,6 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinBaoDuongs.Dto
         public int? SoTienThanhToan { get; set; }
         public string HangMucBaoDuong { get; set; }
         public string DonViBaoDuong { get; set; }
-        public int? TrangThaiDuyet { get; set; }
+        public string TrangThaiDuyet { get; set; }
     }
 }

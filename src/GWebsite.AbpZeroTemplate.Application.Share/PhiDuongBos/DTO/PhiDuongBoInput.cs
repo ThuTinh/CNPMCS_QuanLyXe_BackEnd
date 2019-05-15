@@ -11,11 +11,11 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos
     public class PhiDuongBoInput : Entity<int>
     {
         public string soXe { get; set; }
-        public string ngayCapNhat { get; set; }
-        public string ngayDongPhi { get; set; }
-        public string ngayHetHanDongPhi { get; set; }
-        public string thoiGianSuDung { get; set; }
-        public string soTienThanhToan { get; set; }
+        public DateTime? ngayCapNhat { get; set; }
+        public DateTime? ngayDongPhi { get; set; }
+        public DateTime? ngayHetHanDongPhi { get; set; }
+        public int? thoiGianSuDung { get; set; }
+        public long? soTienThanhToan { get; set; }
         public string congTyThuPhi { get; set; }
         public string loaiPhi { get; set; }
         public string ghiChu { get; set; }

@@ -11,9 +11,9 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
         public  string SoXe { get; set; }
         public  DateTime? NgayBaoDuong { get; set; }
         public  DateTime? NgayBaoDuongTiepTheo { get; set; }
-        public  int? SoTienThanhToan { get; set; }
+        public  double? SoTienThanhToan { get; set; }
         public  string HangMucBaoDuong { get; set; }
         public  string DonViBaoDuong { get; set; }
-        public  int? TrangThaiDuyet { get; set; }
+        public  string TrangThaiDuyet { get; set; }
     }
 }

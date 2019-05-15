@@ -11,8 +11,9 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos
     public class PhiDuongBoFilter : PagedAndSortedInputDto
     {
         public string soXe { get; set; }
-        public string ngayCapNhat { get; set; }
-        public string ngayDongPhi { get; set; }
-        public string congTyThuPhi { get; set; }
+        public DateTime ngayCapNhat { get; set; }
+        public DateTime ngayDongPhi { get; set; }
+        public DateTime congTyThuPhi { get; set; }
+        
     }
 }

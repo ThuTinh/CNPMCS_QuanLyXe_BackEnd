@@ -9,11 +9,11 @@ namespace GWebsite.AbpZeroTemplate.Core.Models
     public class ThongTinSuaChua : FullAuditModel
     {
         public string soXe { get; set; }
-        public string ngaySuaChua { get; set; }
-        public string ngayDuKienSuaXong { get; set; }
-        public string chiPhiSuaChua { get;set;}
+        public DateTime? ngaySuaChua { get; set; }
+        public DateTime? ngayDuKienSuaXong { get; set; }
+        public double? chiPhiSuaChua { get;set;}
         public string noiDungSuaChuaThucTe { get; set; }
-        public bool trangThaiDuyet { get; set; }
+        public string trangThaiDuyet { get; set; }
         public string ghiChu { get; set; }
     }
 }

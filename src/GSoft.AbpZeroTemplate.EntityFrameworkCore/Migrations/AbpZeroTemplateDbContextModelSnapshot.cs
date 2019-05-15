@@ -1847,17 +1847,17 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("loaiPhi");
 
-                    b.Property<string>("ngayCapNhat");
+                    b.Property<DateTime?>("ngayCapNhat");
 
-                    b.Property<string>("ngayDongPhi");
+                    b.Property<DateTime?>("ngayDongPhi");
 
-                    b.Property<string>("ngayHetHanDongPhi");
+                    b.Property<DateTime?>("ngayHetHanDongPhi");
 
-                    b.Property<string>("soTienThanhToan");
+                    b.Property<double?>("soTienThanhToan");
 
                     b.Property<string>("soXe");
 
-                    b.Property<string>("thoiGianSuDung");
+                    b.Property<int?>("thoiGianSuDung");
 
                     b.HasKey("Id");
 
@@ -1942,6 +1942,35 @@ namespace GSoft.AbpZeroTemplate.Migrations
                     b.ToTable("TaiSans");
                 });
 
+            modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThietBiKemTheo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreatedBy");
+
+                    b.Property<DateTime?>("CreatedDate");
+
+                    b.Property<bool>("IsDelete");
+
+                    b.Property<string>("UpdatedBy");
+
+                    b.Property<DateTime?>("UpdatedDate");
+
+                    b.Property<string>("dienGiai");
+
+                    b.Property<int?>("soLuong");
+
+                    b.Property<string>("soXe");
+
+                    b.Property<string>("thietBiKemTheo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ThietBiKemTheos");
+                });
+
             modelBuilder.Entity("GWebsite.AbpZeroTemplate.Core.Models.ThongTinBaoDuong", b =>
                 {
                     b.Property<int>("Id")
@@ -1962,11 +1991,11 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("NgayBaoDuongTiepTheo");
 
-                    b.Property<int?>("SoTienThanhToan");
+                    b.Property<double?>("SoTienThanhToan");
 
                     b.Property<string>("SoXe");
 
-                    b.Property<int?>("TrangThaiDuyet");
+                    b.Property<string>("TrangThaiDuyet");
 
                     b.Property<string>("UpdatedBy");
 
@@ -2003,7 +2032,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("ngayMuaBaoHiem");
 
-                    b.Property<int?>("soTienThanhToan");
+                    b.Property<double?>("soTienThanhToan");
 
                     b.Property<string>("soXe");
 
@@ -2042,7 +2071,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("soXe");
 
-                    b.Property<DateTime>("thoiHanDangKiem");
+                    b.Property<int?>("thoiHanDangKiem");
 
                     b.Property<string>("trangThaiDuyet");
 
@@ -2067,19 +2096,19 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("UpdatedDate");
 
-                    b.Property<string>("chiPhiSuaChua");
+                    b.Property<double?>("chiPhiSuaChua");
 
                     b.Property<string>("ghiChu");
 
-                    b.Property<string>("ngayDuKienSuaXong");
+                    b.Property<DateTime?>("ngayDuKienSuaXong");
 
-                    b.Property<string>("ngaySuaChua");
+                    b.Property<DateTime?>("ngaySuaChua");
 
                     b.Property<string>("noiDungSuaChuaThucTe");
 
                     b.Property<string>("soXe");
 
-                    b.Property<bool>("trangThaiDuyet");
+                    b.Property<string>("trangThaiDuyet");
 
                     b.HasKey("Id");
 
@@ -2102,11 +2131,11 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<DateTime?>("UpdatedDate");
 
-                    b.Property<string>("chieuCao");
+                    b.Property<float?>("chieuCao");
 
-                    b.Property<string>("chieuDai");
+                    b.Property<float?>("chieuDai");
 
-                    b.Property<string>("chieuNgang");
+                    b.Property<float?>("chieuNgang");
 
                     b.Property<string>("coLopSuDung");
 
@@ -2140,7 +2169,7 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("tenChuPhuongTien");
 
-                    b.Property<string>("theTichDongCo");
+                    b.Property<float?>("theTichDongCo");
 
                     b.Property<string>("trangThaiDuyet");
 
