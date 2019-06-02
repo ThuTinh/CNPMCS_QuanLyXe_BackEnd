@@ -15,6 +15,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes
         void DeleteThongTinXe(string soXe);
         PagedResultDto<ThongTinXeDto> GetThongTinXes(ThongTinXeFilter filter);
         ThongTinXeForViewDto GetThongTinXeForView(string soXe);
+      
 
 
     }

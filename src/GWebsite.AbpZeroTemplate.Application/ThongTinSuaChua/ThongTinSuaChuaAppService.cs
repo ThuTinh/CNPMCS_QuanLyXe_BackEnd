@@ -109,15 +109,7 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinSuaChuas
             CurrentUnitOfWork.SaveChanges();
         }
 
-        ThongTinSuaChuaInput IThongTinSuaChuaAppService.GetThongTinSuaChuaForEdit(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        ThongTinSuaChuaForViewDTO IThongTinSuaChuaAppService.GetThongTinSuaChuaForView(int id)
-        {
-            throw new System.NotImplementedException();
-        }
+        
 
         [AbpAuthorize(GWebsitePermissions.Pages_Administration_MenuClient_Edit)]
         private void Update(ThongTinSuaChuaInput thongTinSuaChuaInput)

@@ -14,6 +14,6 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinDangKiems
         ThongTinDangKiemInput GetThongTinDangKiemForEdit(int soXe);
         void DeleteThongTinDangKiem(int soXe);
         PagedResultDto<ThongTinDangKiemDto> GetThongTinDangKiems(ThongTinDangKiemFilter input);
-        ThongTinDangKiemForViewDto GetThongTinDangKiemForView(int soXe);
+        ThongTinDangKiemForViewDto GetThongTinDangKiemForView(int id);
     }
 }

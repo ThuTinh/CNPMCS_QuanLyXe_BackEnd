@@ -2161,6 +2161,8 @@ namespace GSoft.AbpZeroTemplate.Migrations
 
                     b.Property<string>("nuocSanXuat");
 
+                    b.Property<int>("organizationUnitId");
+
                     b.Property<string>("soMay");
 
                     b.Property<string>("soSuon");

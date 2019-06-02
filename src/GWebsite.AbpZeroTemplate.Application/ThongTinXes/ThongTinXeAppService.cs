@@ -1,7 +1,10 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Authorization;
+using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
+using Abp.Extensions;
 using Abp.Linq.Extensions;
+using Abp.Organizations;
 using GWebsite.AbpZeroTemplate.Application;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes;
 using GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto;
@@ -19,11 +22,16 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
     public class ThongTinXeAppService : GWebsiteAppServiceBase, IThongTinXeAppService
     {
         public readonly IRepository<ThongTinXe> thongTinXeRepository;
-       
-        public ThongTinXeAppService(IRepository<ThongTinXe> thongTinXeRepository)
+        public readonly IRepository<OrganizationUnit, long> organizationUnitRepository;
+        private readonly IRepository<UserOrganizationUnit, long> _userOrganizationUnitRepository;
+
+        public ThongTinXeAppService(IRepository<ThongTinXe> thongTinXeRepository,
+             IRepository<OrganizationUnit, long> organizationUnitRepository,
+            IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository)
         {
             this.thongTinXeRepository = thongTinXeRepository;
-            
+            this.organizationUnitRepository = organizationUnitRepository;
+            this._userOrganizationUnitRepository = userOrganizationUnitRepository;
         }
 
         public void CreateOrEditThongTinXe(ThongTinXeInput thongTinXeInput)
@@ -100,6 +108,29 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             //{
             //  query =   query.Where(x => x.model.ToLower().Equals(filter.model) || x.mucDichSuDung.ToLower().Equals(filter.muchDichSuDung) || x.namSanXuat == filter.namSanXuat || x.trangThaiDuyet.ToLower().Equals(filter.trangThaiDuyet) || x.soXe.ToLower().Equals(filter.soXe));
             //}
+            var user = GetCurrentUser();
+
+            var organizationUnitIds = _userOrganizationUnitRepository
+                                        .GetAll()
+                                        .Where(x => x.UserId == user.Id)
+                                        .Select(x => x.OrganizationUnitId)
+                                        .ToList();
+
+
+            var organizationUnitOrUserCodes = organizationUnitRepository
+                                                            .GetAll()
+                                                            .Where(x => x.IsDeleted == false && organizationUnitIds.Contains(x.Id))
+                                                            .Select(x => x.Code)
+                                                            .ToList();
+
+            List<long> unitIds = new List<long>();
+
+            foreach (var code in organizationUnitOrUserCodes)
+            {
+                unitIds.AddRange(organizationUnitRepository.GetAll().Where(x => x.Code.StartsWith(code)).Select(x => x.Id).ToList());
+            }
+
+            query = query.Where(x => unitIds.Contains(x.organizationUnitId));
 
             var total = query.Count();
             if(!string.IsNullOrWhiteSpace(filter.Sorting))
@@ -130,6 +161,30 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
                 return ObjectMapper.Map<ThongTinXeForViewDto>(thongTinXeEntity);
             }
             return null;
+        }
+
+        public bool IsDuyet()
+        {
+            var user = GetCurrentUser();
+
+            var organizationUnitIds = _userOrganizationUnitRepository
+                                        .GetAll()
+                                        .Where(x => x.UserId == user.Id)
+                                        .Select(x => x.OrganizationUnitId)
+                                        .ToList();
+
+
+            var organizationUnitOrUserCodes = organizationUnitRepository
+                                                            .GetAll()
+                                                            .Where(x => x.IsDeleted == false && organizationUnitIds.Contains(x.Id))
+                                                            .Select(x => x.Code)
+                                                            .ToList();
+            string []temp = organizationUnitOrUserCodes[0].ToString().Split(".");
+            if (temp.Length == 2)
+                return true;
+            return false;
+
+
         }
     }
 }

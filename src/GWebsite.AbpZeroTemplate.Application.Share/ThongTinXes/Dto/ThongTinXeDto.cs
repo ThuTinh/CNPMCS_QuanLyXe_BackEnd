@@ -30,5 +30,6 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto
         public string trangThaiDuyet { get; set; }
         public string donViSuDung { get; set; }
         public string tenChuPhuongTien { get; set; }
+        public int organizationUnitId { get; set; }
     }
 }
