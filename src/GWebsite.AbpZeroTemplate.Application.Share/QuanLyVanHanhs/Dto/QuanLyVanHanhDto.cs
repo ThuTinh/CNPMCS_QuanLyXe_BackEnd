@@ -9,6 +9,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.QuanLyVanHanhs.Dto
     /// </summary>
     public class QuanLyVanHanhDto : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string SoXe { get; set; }
         public DateTime? NgayCapNhat { get; set; }
         public int? SoKM { get; set; }

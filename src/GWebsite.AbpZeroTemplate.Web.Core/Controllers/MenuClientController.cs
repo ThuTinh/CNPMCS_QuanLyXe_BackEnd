@@ -2,6 +2,7 @@
 using Abp.Domain.Repositories;
 using Abp.Notifications;
 using GSoft.AbpZeroTemplate.Authorization.Users;
+using GWebsite.AbpZeroTemplate.Application.Controllers.Notify;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients;
 using GWebsite.AbpZeroTemplate.Application.Share.MenuClients.Dto;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
         }
 
         [HttpGet]
-        public async Task<string> GetTest()
+        public  async Task<string> GetTest()
         {
             var users = await userRepository.GetAll().ToListAsync();
             await _notificationPublisher.PublishAsync(
@@ -39,8 +40,11 @@ namespace GWebsite.AbpZeroTemplate.Application.Controllers
                 userIds: users.Select(x => x.ToUserIdentifier()).ToArray()
                 );
 
+          
             return "Test";
+            
         }
+       
 
         [HttpGet]
         public async Task<ListResultDto<MenuClientDto>> GetMenuClients()

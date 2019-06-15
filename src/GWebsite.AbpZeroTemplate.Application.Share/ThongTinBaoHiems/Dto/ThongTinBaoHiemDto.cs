@@ -13,6 +13,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinBaoHiems.Dto
     /// </summary>
     public class ThongTinBaoHiemDto : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string soXe { get; set; }
         public DateTime? ngayMuaBaoHiem { get; set; }
         public DateTime? ngayHetHanBaoHiem { get; set; }

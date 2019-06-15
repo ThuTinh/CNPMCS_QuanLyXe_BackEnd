@@ -26,24 +26,37 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.Duyet
         }
         public bool isDuyet()
         {
+            //Duyệt theo cách cấp cao duyệt cấp dưới
+            //var user = GetCurrentUser();
+
+            //var organizationUnitIds = _userOrganizationUnitRepository
+            //                            .GetAll()
+            //                            .Where(x => x.UserId == user.Id)
+            //                            .Select(x => x.OrganizationUnitId)
+            //                            .ToList();
+
+
+            //var organizationUnitOrUserCodes = organizationUnitRepository
+            //                                                .GetAll()
+            //                                                .Where(x => x.IsDeleted == false && organizationUnitIds.Contains(x.Id))
+            //                                                .Select(x => x.Code)
+            //                                                .ToList();
+            //string[] temp = organizationUnitOrUserCodes[0].ToString().Split(".");
+            //if (temp.Length <= 2)
+            //    return true;
+            //return false;
+
+            //Duyệt chỉ có 1 người duyệt... này demo cho admin là người duyệt
+
             var user = GetCurrentUser();
-
-            var organizationUnitIds = _userOrganizationUnitRepository
-                                        .GetAll()
-                                        .Where(x => x.UserId == user.Id)
-                                        .Select(x => x.OrganizationUnitId)
-                                        .ToList();
-
-
-            var organizationUnitOrUserCodes = organizationUnitRepository
-                                                            .GetAll()
-                                                            .Where(x => x.IsDeleted == false && organizationUnitIds.Contains(x.Id))
-                                                            .Select(x => x.Code)
-                                                            .ToList();
-            string[] temp = organizationUnitOrUserCodes[0].ToString().Split(".");
-            if (temp.Length == 2)
+            string tem = user.UserName;
+            if (tem.Equals("admin"))
                 return true;
-            return false;
+            else
+                return false;
+
+
+
         }
     }
 }

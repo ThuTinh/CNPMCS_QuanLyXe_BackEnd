@@ -11,6 +11,7 @@ using GSoft.AbpZeroTemplate.EntityFrameworkCore;
 using GSoft.AbpZeroTemplate.Identity;
 using GSoft.AbpZeroTemplate.Web.Chat.SignalR;
 using GSoft.AbpZeroTemplate.Web.IdentityServer;
+using GWebsite.AbpZeroTemplate.Core.Helper;
 using Hangfire;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,8 @@ using Microsoft.AspNetCore.Mvc.Cors.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PaulMiami.AspNetCore.Mvc.Recaptcha;
+using Quartz.Impl;
+using Quartz.Spi;
 using Swashbuckle.AspNetCore.Swagger;
 using System;
 using System.IO;
@@ -98,6 +101,21 @@ namespace GSoft.AbpZeroTemplate.Web.Startup
             {
                 SiteKey = _appConfiguration["Recaptcha:SiteKey"],
                 SecretKey = _appConfiguration["Recaptcha:SecretKey"]
+            });
+
+            services.AddSingleton<IJobFactory, QuartzJonFactory>();
+
+            services.AddSingleton(async (provider) =>
+            {
+                var schedulerFactory = new StdSchedulerFactory();
+                var scheduler = await schedulerFactory.GetScheduler();
+                scheduler.JobFactory = provider.GetService<IJobFactory>();
+                await scheduler.Start();
+
+
+
+
+                return scheduler;
             });
 
             //Hangfire (Enable to use Hangfire instead of default job manager)

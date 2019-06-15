@@ -9,6 +9,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinXes.Dto
 {
     public class ThongTinXeDto : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string soXe { get; set; }
         public string model { get; set; }
         public string nuocSanXuat { get; set; }

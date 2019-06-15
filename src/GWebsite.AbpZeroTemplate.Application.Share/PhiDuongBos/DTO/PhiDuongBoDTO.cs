@@ -10,6 +10,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos
 {
     public class PhiDuongBoDTO : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string soXe { get; set; }
         public DateTime? ngayCapNhat { get; set; }
         public DateTime? ngayDongPhi { get; set; }
@@ -18,6 +19,6 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.PhiDuongBos
         public long? soTienThanhToan { get; set; }
         public string congTyThuPhi { get; set; }
         public string loaiPhi { get; set; }
-        public string ghiChu { get; set; }
+        public string ghiChu { get; set; } 
     }
 }

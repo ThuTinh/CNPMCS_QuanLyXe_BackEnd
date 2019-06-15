@@ -9,6 +9,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThietBiKemTheos.Dto
 {
   public  class ThietBiKemTheoDto : Entity<int>
     {
+
         public string soXe { get; set; }
         public string thietBiKemTheo { get; set; }
         public int? soLuong { get; set; }

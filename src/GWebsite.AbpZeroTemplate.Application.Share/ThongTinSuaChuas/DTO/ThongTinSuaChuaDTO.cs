@@ -9,6 +9,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinSuaChuas.DTO
 {
     public class ThongTinSuaChuaDTO : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string soXe { get; set; }
         public DateTime? ngaySuaChua { get; set; }
         public DateTime? ngayDuKienSuaXong { get; set; }

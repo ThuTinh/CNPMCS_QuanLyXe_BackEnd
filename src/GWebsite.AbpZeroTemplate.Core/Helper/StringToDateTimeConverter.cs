@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 using System;
 using System.Collections.Generic;
 using System.Linq;

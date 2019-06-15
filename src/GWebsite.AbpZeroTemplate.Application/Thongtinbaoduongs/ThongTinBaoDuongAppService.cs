@@ -12,7 +12,7 @@ using System.Linq.Dynamic.Core;
 
 namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinBaoDuongs
 {
-    [AbpAuthorize(GWebsitePermissions.Pages_Administration_MenuClient)]
+    [AbpAuthorize(GWebsitePermissions.Pages_Administration_MenuClient)] 
     public class ThongTinBaoDuongAppService : GWebsiteAppServiceBase, IThongTinBaoDuongAppService
     {
         private readonly IRepository<ThongTinBaoDuong> thongtinbaoduongRepository;

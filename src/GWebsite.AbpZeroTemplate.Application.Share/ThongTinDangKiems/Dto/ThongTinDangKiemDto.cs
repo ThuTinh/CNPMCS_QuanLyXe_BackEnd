@@ -15,6 +15,7 @@ namespace GWebsite.AbpZeroTemplate.Application.Share.ThongTinDangKiems.Dto
     /// </summary>
     public class ThongTinDangKiemDto : Entity<int>
     {
+        public string CreatedBy { get; set; }
         public string soXe { get; set; }
         public DateTime ngayDangKiem { get; set; }
         public DateTime ngayHetHanDangKiem { get; set; }

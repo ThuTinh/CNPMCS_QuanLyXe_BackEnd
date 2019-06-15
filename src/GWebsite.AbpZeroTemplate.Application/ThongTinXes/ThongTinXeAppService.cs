@@ -129,8 +129,8 @@ namespace GWebsite.AbpZeroTemplate.Web.Core.ThongTinXes
             {
                 unitIds.AddRange(organizationUnitRepository.GetAll().Where(x => x.Code.StartsWith(code)).Select(x => x.Id).ToList());
             }
-
-            query = query.Where(x => unitIds.Contains(x.organizationUnitId));
+            if(unitIds.Count>0)
+                 query = query.Where(x => unitIds.Contains(x.organizationUnitId));
 
             var total = query.Count();
             if(!string.IsNullOrWhiteSpace(filter.Sorting))
